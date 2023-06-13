@@ -121,10 +121,50 @@
             </li>
           </ul>
         </div>
-      <div class="page-content">
-        <div class="main-wrapper">
-          
-        </div>
+        <div class="page-content">
+            <div class="main-wrapper">
+              <div class="d-flex flex-column w-100">
+                <div class="container-wrapper">
+                  <div
+                    class="d-flex align-items-center justify-content-between p pb-6"
+                  >
+                    <h2 class="m-0">الحجوزات</h2>
+                    <div class="d-flex align-items-center">
+                      <button
+                        class="btn btn-primary btn-sm border border-3"
+                        data-toggle="modal"
+                        data-target="#DeleteWorkerModal"
+                      >
+                        <i data-feather="check" class="align-middle md-18"></i>
+                        <span class="align-middle">تأكيد</span>
+                      </button>
+                      <button
+                        class="btn btn-primary btn-sm border border-3"
+                        data-toggle="modal"
+                        data-target="#DeleteWorkerModal"
+                      >
+                        <i data-feather="delete" class="align-middle md-18"></i>
+                        <span class="align-middle">حذف</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table m-0 bg-white">
+                    <thead class="thead-light">
+                      <tr>
+                        <th class="text-uppercase" style="width: 40px">رقم</th>
+                        <th class="text-uppercase" >اسم المتدرب</th>
+                        <th class="text-uppercase" >اسم المدرب</th>
+                        <th class="text-uppercase" >تاريخ الحصة</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody1"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
 

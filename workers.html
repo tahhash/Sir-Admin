@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>خدمتي - لوحة التحكم الإدارية</title>
+    <title>Sir - لوحة التحكم الإدارية</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap"
       rel="stylesheet"
@@ -102,21 +102,21 @@
       <div class="page-sidebar">
         <ul class="list-unstyled accordion-menu">
           <li>
-            <a href="./orders.html"><i data-feather="package"></i>الطلبات</a>
+            <a href="./orders.html"><i data-feather="file-text"></i>طلبات إجتياز الامتحان</a>
           </li>
           <li>
             <a href="./workers.html"
-              ><i data-feather="user-check"></i>قائمة التقنيين</a
+              ><i data-feather="user-check"></i>مدربي السياقة</a
             >
           </li>
           <li>
-            <a href="./history.html"
-              ><i data-feather="hard-drive"></i>الطلبات المنجزة</a
+            <a href="./users.html"
+              ><i data-feather="user"></i>المتدربين</a
             >
           </li>
           <li>
-            <a href="./new.html"
-              ><i data-feather="folder-plus"></i>الطلبات الواردة</a
+            <a href="./reservation.html"
+              ><i data-feather="calendar"></i>الحجوزات</a
             >
           </li>
         </ul>
@@ -128,7 +128,7 @@
               <div
                 class="d-flex align-items-center justify-content-between p pb-6"
               >
-                <h2 class="m-0">التقنيين</h2>
+                <h2 class="m-0">مدربي السياقة</h2>
                 <div class="d-flex align-items-center">
                   <button
                     class="btn btn-primary btn-sm border border-3"
@@ -136,7 +136,7 @@
                     data-target="#newClientModal"
                   >
                     <i data-feather="user-plus" class="align-middle md-18"></i>
-                    <span class="align-middle">إضافة عامل</span>
+                    <span class="align-middle">إضافة المدرب</span>
                   </button>
                   <button
                     class="btn btn-primary btn-sm border border-3"
@@ -144,7 +144,7 @@
                     data-target="#DeleteWorkerModal"
                   >
                     <i data-feather="user-x" class="align-middle md-18"></i>
-                    <span class="align-middle">حذف عامل</span>
+                    <span class="align-middle">حذف المدرب</span>
                   </button>
                   <button
                     class="btn btn-primary btn-sm border border-3"
@@ -152,10 +152,10 @@
                     data-target="#newOrderModal"
                   >
                     <i
-                      data-feather="shopping-cart"
+                      data-feather="edit"
                       class="align-middle md-18"
                     ></i>
-                    <span class="align-middle">إضافة طلب</span>
+                    <span class="align-middle">تعديل المدرب</span>
                   </button>
                 </div>
               </div>
@@ -165,14 +165,10 @@
                 <thead class="thead-light">
                   <tr>
                     <th class="text-uppercase" style="width: 40px">رقم</th>
-                    <th class="text-uppercase" style="width: 200px">الاسم</th>
-                    <th class="text-uppercase" style="width: 150px">الرقم </th>
+                    <th class="text-uppercase" style="width: 200px">الاسم و اللقب</th>
+                    <th class="text-uppercase" style="width: 200px">نوع السيارة</th>
+                    <th class="text-uppercase" style="width: 150px">رقم الهاتف</th>
                     <th class="text-uppercase" style="width: 200px">البريد الإلكتروني</th>
-                    <th class="text-uppercase" style="width: 150px">الخدمة</th>
-                    <th class="text-uppercase" style="width: 100px">الحالة </th>
-                    <th class="text-right text-uppercase" style="width: 100px">
-                      العمر
-                    </th>
                   </tr>
                 </thead>
                 <tbody id="tbody1"></tbody>
@@ -660,7 +656,6 @@
       }
       Addbtn2.addEventListener("click", DeleteDocument);
 
-      window.onload = GetAllDataOnce;
     </script>
   </body>
 </html>

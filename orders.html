@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>خدمتي - لوحة التحكم الإدارية</title>
+    <title>Sir - لوحة التحكم الإدارية</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap"
       rel="stylesheet"
@@ -81,15 +81,12 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  ><img
-                    src="./assets/images/avatars/profile-image.png"
-                    alt=""
+                  ><img src="./assets/images/avatars/profile-image.png" alt=""
                 /></a>
                 <div
                   class="dropdown-menu dropdown-menu-end profile-drop-menu"
                   aria-labelledby="profileDropDown"
                 >
-                  
                   <a class="dropdown-item" href="./index.html"
                     ><i data-feather="log-out"></i>تسجيل الخروج</a
                   >
@@ -102,21 +99,21 @@
       <div class="page-sidebar">
         <ul class="list-unstyled accordion-menu">
           <li>
-            <a href="./orders.html"><i data-feather="package"></i>الطلبات</a>
+            <a href="./orders.html"
+              ><i data-feather="file-text"></i>طلبات إجتياز الامتحان</a
+            >
           </li>
           <li>
             <a href="./workers.html"
-              ><i data-feather="user-check"></i>قائمة التقنيين</a
+              ><i data-feather="user-check"></i>مدربي السياقة</a
             >
           </li>
           <li>
-            <a href="./history.html"
-              ><i data-feather="hard-drive"></i>الطلبات المنجزة</a
-            >
+            <a href="./users.html"><i data-feather="user"></i>المتدربين</a>
           </li>
           <li>
-            <a href="./new.html"
-              ><i data-feather="folder-plus"></i>الطلبات الواردة</a
+            <a href="./reservation.html"
+              ><i data-feather="calendar"></i>الحجوزات</a
             >
           </li>
         </ul>
@@ -128,28 +125,34 @@
               <div
                 class="d-flex align-items-center justify-content-between p pb-6"
               >
-                <h2 class="m-0">الطلبات</h2>
-                <button
-                  class="btn btn-primary btn-sm border border-3"
-                  data-toggle="modal"
-                  data-target="#newClientModal"
-                >
-                  <i data-feather="user-plus" class="align-middle md-18"></i>
-                  <span class="align-middle">إضافة طلب</span>
-                </button>
+                <h2 class="m-0">طلبات اجتياز الامتحان</h2>
+                <div class="d-flex align-items-center">
+                  <button
+                    class="btn btn-primary btn-sm border border-3"
+                    data-toggle="modal"
+                    data-target="#DeleteWorkerModal"
+                  >
+                    <i data-feather="check" class="align-middle md-18"></i>
+                    <span class="align-middle">تأكيد</span>
+                  </button>
+                  <button
+                    class="btn btn-primary btn-sm border border-3"
+                    data-toggle="modal"
+                    data-target="#DeleteWorkerModal"
+                  >
+                    <i data-feather="delete" class="align-middle md-18"></i>
+                    <span class="align-middle">حذف</span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="table-responsive">
               <table class="table bg-white m-0">
                 <thead class="thead-light">
                   <tr>
-                    <th class="text-right text-uppercase">اسم و لقب الزبون</th>
-                    <th class="text-right text-uppercase">رقم الزبون</th>
-                    <th class="text-right text-uppercase">البريد الإلكتروني للزبون</th>
-                    <th class="text-right text-uppercase">اسم و لقب التقني</th>
-                    <th class="text-right text-uppercase">البريد الإلكتروني للتقني</th>
-                    <th class="text-right text-uppercase">رقم التقني</th>
-                    <th class="text-right text-uppercase">الخدمات</th>
+                    <th class="text-right text-uppercase">اسم المتدرب</th>
+                    <th class="text-right text-uppercase">نوع الامتحان</th>
+                    <th class="text-right text-uppercase">تاريخ الطلب</th>
                   </tr>
                 </thead>
                 <tbody id="tbody1"></tbody>
@@ -219,9 +222,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="newClientModalLabel">
-              إضافة طلب
-            </h5>
+            <h5 class="modal-title" id="newClientModalLabel">إضافة طلب</h5>
             <button
               type="button"
               class="close"
@@ -235,7 +236,8 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>اسم الزبون</label>
-                <input required
+                <input
+                  required
                   type="text"
                   class="form-control"
                   id="client-name"
@@ -244,7 +246,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label>البريد الإلكتروني للزبون</label>
-                <input required
+                <input
+                  required
                   type="email"
                   class="form-control"
                   id="client-email"
@@ -253,7 +256,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label>رقم الزبون</label>
-                <input required
+                <input
+                  required
                   type="number"
                   class="form-control"
                   id="client-number"
@@ -263,7 +267,8 @@
               <br />
               <div class="form-group col-md-6">
                 <label>اسم التقني</label>
-                <input required
+                <input
+                  required
                   type="text"
                   id="worker-name"
                   class="form-control"
@@ -272,7 +277,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label>البريد الإلكتروني للتقني</label>
-                <input required
+                <input
+                  required
                   type="email"
                   id="worker-email"
                   class="form-control"
@@ -281,7 +287,8 @@
               </div>
               <div class="form-group col-md-6">
                 <label>رقم التقني</label>
-                <input required
+                <input
+                  required
                   type="text"
                   id="worker-number"
                   class="form-control"
@@ -291,7 +298,8 @@
               <br />
               <div class="form-group col-md-6">
                 <label>الخدمة</label>
-                <input required
+                <input
+                  required
                   type="text"
                   id="service"
                   class="form-control"
@@ -444,8 +452,6 @@
         });
         AddAllItemsToTable(orders);
       }
-
-      window.onload = GetAllDataOnce;
     </script>
   </body>
 </html>
